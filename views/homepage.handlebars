@@ -1,1 +1,9 @@
 {{!-- {{Homepage which will list previous posts}} --}}
+
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post }}
+  </li>
+  {{/each}}
+</ol>
