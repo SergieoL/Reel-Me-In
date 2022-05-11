@@ -1,0 +1,3 @@
+const postController = (res, req) => {
+    
+}
