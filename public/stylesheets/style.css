@@ -39,3 +39,7 @@ footer {
     border: 2px solid #E1C639;
     border-radius: 25px;
 }
+
+.post-list {
+    margin: auto;
+}
