@@ -22,3 +22,19 @@ footer {
     background-color: black;
     border: 2px solid #E1C639;
 }
+
+.login-card {
+    height: 500px;
+    width: 400px;
+    background-color: black;
+    border: 2px solid #E1C639;
+    border-radius: 25px;
+}
+
+.signup-card {
+    height: 500px;
+    width: 400px;
+    background-color: black;
+    border: 2px solid #E1C639;
+    border-radius: 25px;
+}
