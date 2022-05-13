@@ -1,6 +1,6 @@
 const { Review } = require('../models');
 
-const commentData = [
+const reviewData = [
     {
         user_id: 1,
         post_id: 5,
@@ -43,6 +43,6 @@ const commentData = [
     }
 ]
 
-const seedReviews = () => Review.bulkCreate(commentData);
+const seedReviews = () => Review.bulkCreate(reviewData);
 
 module.exports = seedComments;
