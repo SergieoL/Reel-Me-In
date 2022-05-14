@@ -16,10 +16,10 @@ const seedAll = async () => {
     console.log('\n----- POSTS SEEDED -----\n');
 
   await seedReviews();
-    console.log('\n----- COMMENTS SEEDED -----\n');
+    console.log('\n----- REVIEWS SEEDED -----\n');
 
 await seedVotes();
-    console.log('\n----- COMMENTS SEEDED -----\n');
+    console.log('\n----- VOTES SEEDED -----\n');
 
   process.exit(0);
 };
