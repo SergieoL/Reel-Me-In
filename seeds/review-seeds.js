@@ -1,7 +1,5 @@
 const { Review } = require('../models');
 
-PostID
-
 const reviewData = [
     {
         body: "I liked it!",
