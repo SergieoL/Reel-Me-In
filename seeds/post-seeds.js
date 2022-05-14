@@ -3,29 +3,34 @@ const { Post } = require('../models');
 const postData = [
     {
         title: "Upcoming: Bob's Burgers",
-        post_content: "Are you excited for Bob's Burgers?",
-        user_id: 3
+        body: "Are you excited for Bob's Burgers?",
+        UserId: 3,
+        id: 1
     },
     {
         title: "Doctor Strange",
-        post_content: "What did you think?",
-        user_id: 1
+        body: "What did you think?",
+        UserId: 1,
+        id: 2
     },
     {
         title: "Uncharted",
-        post_content: "What did you think?",
-        user_id: 2
-
+        body: "What did you think?",
+        UserId: 2,
+        id: 3
     },
     {
         title: "The Batman",
-        post_content: "What did you think?",
-        user_id: 5
+        body: "What did you think?",
+        UserId: 5,
+        id: 4
+
     },
     {
         title: "Sonic 2",
-        post_content: "What did you think?",
-        user_id: 4
+        body: "What did you think?",
+        UserId: 4,
+        id: 5
     }
 ]
 
