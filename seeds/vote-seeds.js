@@ -22,3 +22,7 @@ const voteData = [
         PostID: 4
     }
 ]
+
+const seedVotes = () => Vote.bulkCreate(voteData);
+
+module.exports = seedVotes;
