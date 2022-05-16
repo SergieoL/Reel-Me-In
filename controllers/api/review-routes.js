@@ -5,13 +5,19 @@ const { Review, User, Comment } = require('../../models');
 router.get('/', (req, res ) => {
     Review.findAll({
         order: [['created_at', 'DESC']],
+        // include user that created the review
         include: [
-            {
-                model: Comment
-            },
             {
                 model: User,
                 attributes: ['username']
+            },
+            // includes all comments and user that posted them
+            {
+                model: Comment,
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
             }
         ]
     })
