@@ -12,14 +12,17 @@
     </head>
 </head>
 <body>
-    <div class="page-header bg-secondary text-primary">
+    <div class="page-header bg-secondary text-primary border-bottom border-3">
         <ul class="nav navbar-nav d-flex flex-row p4">
-            <i class="bi bi-film"></i>
-            <li class="col"><a href="/">Reel Me In</a></li>
+            <i class="h1 bi bi-film"></i>
+            <li class="h1 col"><a href="/">Reel Me In</a></li>
+            {{#if loggedIn}}
+            <button id="logout" class="col btn btn-link">logout</button>
+            {{else}}
             <li class="col"><a href="/login">Login</a></li>
-            <li class="col"><a href="/signup">Sign Up</a></li>
-
-        </ul>
+            <li class="col"><a href="/create-account">Sign Up</a></li>
+            {{/if}}
+          </ul>
         </div>
     {{!-- {{Body content variable here}} --}}
     {{{body}}}
