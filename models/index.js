@@ -1,7 +1,7 @@
 // importd Models and exports as objects with it as a property
+const Comment = require('./Comment');
 const User = require('./User');
 const Review = require('./Review');
-const Comment = require('./Comment');
 
 // create associations
 
