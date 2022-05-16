@@ -1,11 +1,15 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.render('homepage', {
-    posts,
-    loggedIn: req.session.loggedIn
-  });
+  res.render('homepage');
 });
+
+// router.get('/', (req, res) => {
+//   res.render('homepage', {
+//     posts,
+//     loggedIn: req.session.loggedIn
+//   });
+// });
 
 
 router.get('/login', (req, res) => {
