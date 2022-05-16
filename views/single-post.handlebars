@@ -1,0 +1,23 @@
+<!-- displaying articles -->
+{{> post-info post}}
+
+<!-- displaying form and reviews-->
+<!-- only display if logged in -->
+{{#if loggedIn}}
+<form class="review-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Add Review</button>
+  </div>
+  
+</form>
+{{/if}}
+
+{{> review post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/review.js"></script>
+{{/if}}
