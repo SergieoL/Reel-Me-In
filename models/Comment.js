@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Review extends Model {}
+class Comment extends Model {}
 
-Review.init(
+Comment.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,22 +11,21 @@ Review.init(
             primaryKey: true,
             autoIncrement: true
         },
-        title: {
+        comment_text: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        content: {
-            type: DataTypes.TEXT,
-            allowNull: false
-        },
         user_id: {
-            type: DataTypes.TEXT,
-            allowNull: false
-        },
-        usr_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
+                key: 'id'
+            }
+        },
+        review_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'review',
                 key: 'id'
             }
         }
@@ -35,8 +34,6 @@ Review.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'review'
+        modelName: 'comment'
     }
 )
-
-module.exports = Review;
