@@ -19,7 +19,7 @@ Review.init(
             type: DataTypes.TEXT,
             allowNull: false
         },
-        usr_id: {
+        user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
