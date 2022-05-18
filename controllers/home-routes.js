@@ -3,37 +3,44 @@ const sequelize = require('../config/connection');
 const router = require('express').Router();
 
 // get all reviews for homepage
-router.get('/', (req, res ) => {
-  console.log(req.session);
-  Review.findAll({
-      order: [['created_at', 'DESC']],
-      // include user that created the review
-      include: [
-          {
-              model: User,
-              attributes: ['username']
-          },
-          // includes all comments and user that posted them
-          {
-              model: Comment,
-              include: {
-                  model: User,
-                  attributes: ['username']
-              }
-          }
-      ]
-  })
-  .then(dbReviewData => {
-    const reviews = dbReviewData.map(review => review.get({ plain: true }));
-    res.render('homepage', {
-      reviews,
-      loggedIn: req.session.loggedIn
-    });
-  })
-  .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-  })
+router.get('/', (req, res) => {
+    console.log(req.session);
+
+    Review.findAll({
+        attributes: [
+            'content',
+            'movieTitle',
+            'reviewTitle',
+            'created_at',
+            'id'
+        ],
+        order: [['created_at', 'DESC']],
+        include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'review_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(dbReviewData => {
+        const reviews = dbReviewData.map(review => review.get({ plain: true}));
+        res.render('homepage', {
+             reviews,
+             loggedIn: req.session.loggedIn
+             });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
 })
 
 router.get('/login', (req, res) => {
