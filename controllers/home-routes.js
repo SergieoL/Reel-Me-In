@@ -86,7 +86,10 @@ router.get('/review/:id', (req, res) => {
   })
 })
 
-// imdb search for movie title key
+// render create a review page
+router.get('/create-review', (req, res) => {
+  res.render('/create-review');
+})
 
 
 module.exports = router;
