@@ -1,3 +1,4 @@
+
 {{!-- {{Single Page HTML}} --}}
 {{!-- {{added sample post to test with}} --}}
 <article class="post">
@@ -14,11 +15,13 @@
 
   {{#if loggedIn}}
   <form class="comment-form">
+
   <div>
     <textarea name="comment-body"></textarea>
   </div>
 
   <div>
+
     <button type="submit">add comment</button>
     <button type="button" class="upvote-btn">This guy gets it!</button>
   </div>
@@ -42,4 +45,5 @@
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
+
 {{/if}}
