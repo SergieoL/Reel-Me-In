@@ -4,6 +4,7 @@ const router = require('express').Router();
 
 // get all reviews for homepage
 router.get('/', (req, res ) => {
+  console.log(req.session);
   Review.findAll({
       order: [['created_at', 'DESC']],
       // include user that created the review

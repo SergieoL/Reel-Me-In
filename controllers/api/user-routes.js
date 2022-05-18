@@ -6,7 +6,14 @@ router.get('/', (req, res) => {
     User.findAll({
         attributes: { exclude: ['password'] }
       })
-        .then(dbUserData => res.json(dbUserData))
+        .then(dbUserData => {
+          req.session.save(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.loggedIn = true;
+            res.json(dbUserData);
+          })
+        })
         .catch(err => {
           console.log(err);
           res.status(500).json(err);
@@ -50,7 +57,7 @@ router.post('/', (req, res) => {
 
 // login authentication
 router.post('/login', (req, res) => {
-  // expects {username: 'user22', password: 'password1234'}
+  // expects {username: 'user', password: 'password1234'}
   User.findOne({
     where: {
       username: req.body.username
@@ -64,7 +71,7 @@ router.post('/login', (req, res) => {
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password!' });
+      res.status(400).json({ message: 'Incorrect password' });
       return;
     }
 
@@ -73,10 +80,22 @@ router.post('/login', (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
   
-      res.json({ user: dbUserData, message: 'You are now logged in!' });
-      console.log('==========================================');
+      res.json({ user: dbUserData, message: 'Logged in' });
     });
   });
+});
+
+// logout
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    console.log('===========================================================' + 'logeed out' + '================================');
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
 });
 
 // PUT /api/users/1
