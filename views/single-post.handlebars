@@ -7,6 +7,9 @@
     <h2 id="movie-review-title">Review: </h2>
     <span id="date-posted">Date Posted:</span>
 
+    <div id="movie-poster"</div>
+    <span id="year-released">Year Released: </span>
+
     <span id="movie-information">
       <h3>Movie Review</h3>
       <p></p>
@@ -26,5 +29,20 @@
 <section id="comment-section">
 
   <h2>Comments:</h2>
+
+  {{#if loggedIn}}
+<form class="comment-form">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
+    <div>
+        <button type="submit">Add Comment</button>
+    </div>
+</form>
+{{/if}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
 
 </section>
