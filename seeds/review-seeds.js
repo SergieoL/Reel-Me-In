@@ -1,33 +1,39 @@
-const { Review } = require('../models');
+const { Post } = require('../models');
 
-const reviewData = [
+const postData = [
     {
-        body: "I liked it!",
-        PostID: 3,
-        UserId: 1,
-    },
-    {
-        body: "I'm excited for it!!",
-        PostID: 1,
-        UserId: 5,
-    },
-    {
-        body: "GREATEST BATMAN EVER!",
-        PostID: 4,
-        UserId: 4,
-    },
-    {
-        body: "I'm indifferent.",
-        PostID: 2,
+        title: "Upcoming: Bob's Burgers",
+        body: "Are you excited for Bob's Burgers?",
         UserId: 3,
+        id: 1
     },
     {
-        body: "Gotta go fast!",
-        PostID: 5,
-        UserId: 2,
+        title: "Doctor Strange",
+        body: "What did you think?",
+        UserId: 1,
+        id: 2
     },
+    {
+        title: "Uncharted",
+        body: "What did you think?",
+        UserId: 2,
+        id: 3
+    },
+    {
+        title: "The Batman",
+        body: "What did you think?",
+        UserId: 5,
+        id: 4
+
+    },
+    {
+        title: "Sonic 2",
+        body: "What did you think?",
+        UserId: 4,
+        id: 5
+    }
 ]
 
-const reviewPosts = () => Review.bulkCreate(reviewData);
+const seedPosts = () => Post.bulkCreate(postData);
 
-module.exports = reviewPosts;
+module.exports = seedPosts;
