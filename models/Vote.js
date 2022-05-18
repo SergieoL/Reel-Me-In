@@ -14,6 +14,6 @@ Vote.init(
     {
         sequelize
     }
-        )
+);
 
-        module.exports = Vote;
+module.exports = Vote;
