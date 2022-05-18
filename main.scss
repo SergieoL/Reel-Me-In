@@ -1,3 +1,4 @@
+// customizes theme colors
 $theme-colors: (
   "primary": #B7582A,
   "danger": #241B1C,
@@ -6,4 +7,6 @@ $theme-colors: (
   "warning": #EBD8C9
 );
 
+// imports bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
+
