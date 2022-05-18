@@ -1,6 +1,6 @@
-const { Post } = require('../models');
+const { Review } = require('../models');
 
-const postData = [
+const reviewData = [
     {
         title: "Upcoming: Bob's Burgers",
         body: "Are you excited for Bob's Burgers?",
@@ -34,6 +34,6 @@ const postData = [
     }
 ]
 
-const seedPosts = () => Post.bulkCreate(postData);
+const seedReview = () => Review.bulkCreate(reviewData);
 
-module.exports = seedPosts;
+module.exports = seedReview;

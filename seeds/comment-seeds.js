@@ -1,6 +1,6 @@
-const { Review } = require('../models');
+const { Comment } = require('../models');
 
-const reviewData = [
+const commentData = [
     {
         body: "I liked it!",
         PostID: 3,
@@ -28,6 +28,6 @@ const reviewData = [
     },
 ]
 
-const reviewPosts = () => Review.bulkCreate(reviewData);
+const commentPosts = () => Comment.bulkCreate(commentData);
 
-module.exports = reviewPosts;
+module.exports = commentPosts;
