@@ -2,19 +2,21 @@
 {{!-- {{Login page HTML}} --}}
 <div class="container row">
         <div class="Jumbotron col-sm-4 pull-center">
-            <form action="/signup" method="post">
+            <form class="login-form">
                 <div>
                     <label>Username:</label>
-                    <input type="text" name="username"/>
+                    <input type="text" id="username" name="username"/>
                 </div>
                 <div>
                     <label>Password:</label>
-                    <input type="password" name="password"/>
+                    <input type="password" id="password" name="password"/>
                 </div>
                 <div>
-                    <input class="btn btn-primary" type="submit" value="Sign Up"/>
+                    <input class="btn btn-primary" type="submit" value="Log In"/>
                 </div>
             </form>
             <script src="/javascript/login.js"></script>
         </div>
 </div>
+
+<script src="javascript/login.js"></script>
