@@ -1,4 +1,3 @@
-const seedPosts = require('./post-seeds');
 const seedUsers = require('./user-seeds');
 const seedReviews = require('./review-seeds');
 const seedVotes = require('./vote-seeds')
@@ -12,9 +11,6 @@ const seedAll = async () => {
   await seedUsers();
     console.log('\n----- USERS SEEDED -----\n');
   
-  await seedPosts();
-    console.log('\n----- POSTS SEEDED -----\n');
-
   await seedReviews();
     console.log('\n----- REVIEWS SEEDED -----\n');
 
