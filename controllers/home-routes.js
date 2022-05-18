@@ -26,7 +26,8 @@ router.get('/', (req, res ) => {
   .then(dbReviewData => {
     const reviews = dbReviewData.map(review => review.get({ plain: true }));
     res.render('homepage', {
-      reviews
+      reviews,
+      loggedIn: req.session.loggedIn
     });
   })
   .catch(err => {
@@ -78,7 +79,8 @@ router.get('/review/:id', (req, res) => {
     const review = dbReviewData.get({ plain: true});
     console.log(review);
     res.render('single-post', {
-      review
+      review,
+      loggedIn: req.session.loggedIn
     })
   })
   .catch(err => {
