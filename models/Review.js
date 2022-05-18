@@ -11,7 +11,11 @@ Review.init(
             primaryKey: true,
             autoIncrement: true
         },
-        title: {
+        movieTitle: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        reviewTitle: {
             type: DataTypes.STRING,
             allowNull: false
         },

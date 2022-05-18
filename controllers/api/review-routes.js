@@ -31,7 +31,8 @@ router.get('/', (req, res ) => {
 // add a review
 router.post('/', (req, res) => {
     Review.create({
-        title: req.body.title,
+        movieTitle: req.body.movieTitle,
+        reviewTitle: req.body.reviewTitle,
         content: req.body.content,
         user_id: req.body.user_id
     })
