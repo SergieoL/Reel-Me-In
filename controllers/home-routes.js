@@ -47,8 +47,46 @@ router.get('/create-account', (req, res) => {
   res.render('create-account');
 });
 
-router.get('/single-post', (req, res) => {
-  res.render('single-post');
+// render page to load single review
+router.get('/review/:id', (req, res) => {
+  Review.findOne({
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: User,
+      }
+    ],
+    include: [
+      {
+        model: Comment,
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      }
+    ]
+  })
+  .then(dbReviewData => {
+    if (!dbReviewData) {
+      res.status(404).json({ message: 'No review found with this id'});
+      return;
+    }
+
+    const review = dbReviewData.get({ plain: true});
+    console.log(review);
+    res.render('single-post', {
+      review
+    })
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
 })
+
+// imdb search for movie title key
+
 
 module.exports = router;
