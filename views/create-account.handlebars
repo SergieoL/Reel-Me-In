@@ -1,29 +1,21 @@
-{{!-- {{Create Account Page}} --}}
-
-<header><h1>Reel Me In</h1></header>
-
-<section class="signup-card">
-
-    <form class="signup-form">
-    <div>
-        <label for="username-signup">username:</label>
-        <input type="text" id="username-signup" />
-    </div>
-    <div>
-        <label for="email-signup">email:</label>
-        <input type="text" id="email-signup" />
-    </div>
-    <div>
-        <label for="password-signup">password:</label>
-        <input type="password" id="password-signup" />
-    </div>
-    <div>
-        <button type="submit">signup</button>
-    </div>
-    </form>
-
-</section>    
-
-<footer></footer>
-
-<script src="/javascript/create-account.js"></script>
+<div class="container row">
+        <div class="Jumbotron col-sm-4 pull-center">
+            <form action="/signup" method="post">
+                <div>
+                    <label>Username:</label>
+                    <input type="text" name="username"/>
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="text" name="email"/>
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" name="password"/>
+                </div>
+                <div>
+                    <input class="btn btn-primary" type="submit" value="Sign Up"/>
+                </div>
+            </form>
+        </div>
+</div>
