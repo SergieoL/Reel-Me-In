@@ -88,7 +88,7 @@ router.get('/review/:id', (req, res) => {
 
 // render create a review page
 router.get('/create-review', (req, res) => {
-  res.render('/create-review');
+  res.render('create-review');
 })
 
 
