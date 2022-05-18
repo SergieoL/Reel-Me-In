@@ -3,27 +3,27 @@ const { Comment } = require('../models');
 const commentData = [
     {
         body: "I liked it!",
-        PostID: 3,
+        review_id: 3,
         UserId: 1,
     },
     {
         body: "I'm excited for it!!",
-        PostID: 1,
+        review_id: 1,
         UserId: 5,
     },
     {
         body: "GREATEST BATMAN EVER!",
-        PostID: 4,
+        review_id: 4,
         UserId: 4,
     },
     {
         body: "I'm indifferent.",
-        PostID: 2,
+        review_id: 2,
         UserId: 3,
     },
     {
         body: "Gotta go fast!",
-        PostID: 5,
+        review_id: 5,
         UserId: 2,
     },
 ]

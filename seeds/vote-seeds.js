@@ -3,23 +3,23 @@ const { Vote } = require('../models');
 const voteData = [
     {
         thumbsUp: true,
-        PostID: 5
+        review_id: 5
     },
     {
         thumbsUp: false,
-        PostID: 2
+        review_id: 2
     },
     {
         thumbsUp: true,
-        PostID: 1
+        review_id: 1
     },
     {
         thumbsUp: false,
-        PostID: 3
+        review_id: 3
     },
     {
         thumbsUp: true,
-        PostID: 4
+        review_id: 4
     }
 ]
 

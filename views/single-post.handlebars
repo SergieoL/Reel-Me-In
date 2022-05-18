@@ -1,49 +1,31 @@
-
 {{!-- {{Single Page HTML}} --}}
-{{!-- {{added sample post to test with}} --}}
-<article class="post">
-  <div class="title">
-    <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-    <span>({{post.post_url}})</span>
-  </div>
-  <div class="meta">
-    {{post.vote_count}} point(s) by {{post.user.username}} on
-    {{post.created_at}}
-    |
-    <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-  </div>
 
-  {{#if loggedIn}}
-  <form class="comment-form">
+{{!-- {{Main Movie Post Section}} --}}
+<main>
+    <a href="/localhost3001"> &larr; back to homepage</a>
 
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
+  <section id="movie-review-post"</section>
 
-  <div>
+    <input id="date-posted" type="date" name="Date Posted"></input>
 
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">This guy gets it!</button>
-  </div>
-</form>
-{{/if}}
+    <h2 id="movie-review-title">Review: </h2>
 
-<div class="comments">
-  {{#each post.comments}}
-  <section class="comment">
-    <div class="meta">
-      {{user.username}} on {{created_at}}
-    </div>
-    <div class="text">
-      {{comment_text}}
-    </div>
+    <span id="movie-information">
+      <h3>Movie Review</h3>
+      <p></p>
+    </span>
+
+    <button type="submit">Upvote</button>
+
+    <button type="submit">Downvote</button>
+
+    <div id="votes-counter">Upvotes/Downvotes</div>
+  
   </section>
-  {{/each}}
-</div>
-</article>
 
-{{#if loggedIn}}
-<script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
+</main>
 
-{{/if}}
+{{!-- {{Comment Section}} --}}
+<section id="comment-section">
+
+</section>
