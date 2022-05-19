@@ -10,6 +10,7 @@ const searchMovie = function (movieTitle) {
     fetch(apiUrl).then(function (response) {
         response.json().then(function (data) {
             movieData = data.results[0];
+            console.log('success');
             console.log(movieData);
 
             document.getElementById("moviePoster").innerHTML = `<img src="${movieData.image}" width=300px>`;
@@ -19,5 +20,4 @@ const searchMovie = function (movieTitle) {
         })
     })
 }
-
 searchMovie(movieTitle);
