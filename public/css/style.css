@@ -10817,3 +10817,8 @@ textarea.form-control-lg {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.carousel {
+  width:640px;
+  height:360px;
+}
