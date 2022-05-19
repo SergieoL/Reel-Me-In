@@ -1,8 +1,23 @@
-{{!-- {{Single Page HTML}} --}}
 
-{{!-- {{Main Movie Post Section}} --}}
-<main>
-  <section id="movie-review-post"</section>
+<div id="moviePoster"></div>
+<article class="review">
+    <div class="title">
+        <h1 id="movieTitle">{{review.movieTitle}}</h1>
+        <div id="movieYear"></div>
+        <h4>{{review.reviewTitle}}</h4>
+    </div>
+    <p>
+        {{review.content}}
+    </p>
+    <div class="meta">
+     by {{review.user.username}} on
+    {{review.created_at}}
+    |
+    <a href="/reviews/{{review.id}}">{{review.comments.length}} comment(s)</a>
+    </div>
+  {{#if loggedIn}}
+  <form class="comment-form">
+
 
     <h2 id="movie-review-title">Review: </h2>
     <span id="date-posted">Date Posted:</span>
@@ -27,17 +42,13 @@
   
   </section>
 
-</main>
 
-{{!-- {{Comment Section}} --}}
-<section id="comment-section">
+<div class="comments">
+  {{#each review.comments}}
+  <section class="comment">
+    <div class="meta">
+      {{user.username}} on {{created_at}}
 
-  <h2>Comments:</h2>
-
-  {{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
     </div>
     <div>
         <button type="submit">Add Comment</button>
@@ -47,6 +58,7 @@
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
+
+<script src="/javascript/movie-data.js"></script>
 {{/if}}
 
-</section>
