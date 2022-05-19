@@ -1,21 +1,29 @@
-<section>
-    <h2>Create New Post</h2>
-    <form class="new-post-form">
-        <a href="/"> &larr;Go Back</a>
-        <div>
-            <label for="movie-title">Movie Title</label>
-            <input type="text" id="movie-title" name="movie-title" />
+
+<section class="container-fluid row">
+    <section class="col"></section>
+    <section class="col mt-5 border border-3 border-primary bg-info bg-gradient rounded">
+        <h2 class="text-center mb-3">Is it Worth $9.50?</h2>
+    <form class="new-post-form row">
+        
+        <div class="mb-3">
+            <label for="movie-title" class="col-sm-4">Movie Title</label>
+            <input type="text" id="movie-title" name="movie-title" class="col-sm-8" />
+        </div>
+        <div class="mb-3">
+            <label for="review-title" class="col-sm-4">Review Title</label>
+            <input type="text" id="review-title" name="review-title" class="col-sm-8" />
+        </div>
+        <div class="mb-3">
+            <label for="review-content" class="col-sm-4">Content</label>
+            <textarea id="review-content" name="review-content" class="col-sm-8"></textarea>
         </div>
         <div>
-            <label for="review-title">Review Title</label>
-            <input type="text" id="review-title" name="review-title" />
+        <a href="/homepage" class="btn bg-primary link-danger text-decoration-none"> &larr;Go Back</a>
+        <button type="submit" class="bg-primary btn">+ Review</button>
         </div>
-        <div>
-            <label for="review-content">Content</label>
-            <textarea id="review-content" name="review-content"></textarea>
-        </div>
-        <button type="submit" class="btn">+ Review</button>
     </form>
+</section>
+<section class="col"></section>
 </section>
 
 <script src="/javascript/create-review.js"></script>

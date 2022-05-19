@@ -44,12 +44,12 @@ Contact any of the authors:
 |Ted | The-Coding-Bat |
 |Markeice | Markeicegreen16 |
 |Mika | Mikak02 |
-|Kailey | Kailey |
+|Kailey | Kailey09 |
 
 ### How to Make Contributions <a name="contribute"></a>
 Please contact authors for collaboration
 
 ### Link <a name="link"></a>
-[Link to deployed Application](link-to-heroku)
+[Link to deployed Application](https://radiant-spire-43356.herokuapp.com/)
 
 ![Screenshot](./public/images/screenshot.png)
