@@ -50,6 +50,6 @@ Contact any of the authors:
 Please contact authors for collaboration
 
 ### Link <a name="link"></a>
-[Link to deployed Application](https://radiant-spire-43356.herokuapp.com/)
+[Link to deployed Application](https://dashboard.heroku.com/apps/reel-me-in-2020)
 
 ![Screenshot](./public/images/screenshot.png)
