@@ -5,10 +5,8 @@
     {{#each reviews as |review| }}
   <li>
     <article class="post">
-  <div class="title">
-
-      <a href="/reviews/{{id}}"
-
+  <div class="title mt-2">
+      <a href="/post/{{id}}" class="link-danger h3"
       <h1>{{movieTitle}}</h1>
       </a>
   </div>
@@ -18,10 +16,11 @@
   <p>
       {{content}}
   </p>
-  <div class="meta">
+  <div class="meta text-primary mb-4">
     |
     Reviewed by {{user.username}}
     |
+    <i class="bi bi-stars text-info"></i>
   </div>
 </article>
   </li>
@@ -29,4 +28,58 @@
 </ol>
 
   </div>
+</div>
+
+<section class="m-3 row">
+  <div class="col text-end"><i class="h1 text-info inline-text bi bi-coin"></i></div>
+  <h4 class="border border-3 border-primary text-center col bg-success bg-gradient p-3">What Else Can You Buy for $9.50?</h4>
+  <div class="col text-start"><i class="h1 text-info inline-text bi bi-coin"></i></div>
+</section>
+
+<div class="row">
+  <div class="col">
+  </div>
+<section class="col"> 
+   <div id="carouselTenDollars" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselTenDollars" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselTenDollars" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselTenDollars" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.pexels.com/photos/46024/pexels-photo-46024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="img of pets">
+      <div class="carousel-caption d-none d-md-block text-danger bg-info border border-primary border-3">
+        <h5>Annual Rabies Shot</h5>
+        <p>Get your best friend their favorite yearly shot.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.pexels.com/photos/793785/pexels-photo-793785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="img of toast">
+      <div class="carousel-caption d-none d-md-block text-danger bg-info border border-primary border-3">
+        <h5>Slice of Avocado Toast</h5>
+        <p>Visit that fancy hipster coffee shop and order the millionaire's folly.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.pexels.com/photos/3602009/pexels-photo-3602009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="img of pumps">
+      <div class="carousel-caption d-none d-md-block text-danger bg-info border border-primary border-3">
+        <h5>Two-and-a-half Gallons of Gas</h5>
+        <p>Turn that pesky low-fuel light off for the day.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselTenDollars" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselTenDollars" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> 
+</section>
+<div class="col">
+
+</div>
 </div>
