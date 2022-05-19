@@ -1,43 +1,30 @@
+<div class="card">
+  <div class="card-body bg-warning">
 
-{{!-- {{Home page HTML}} --}}
-<html>
-    <head>
-        <title>
-        {{# if loggedin}}
-            Welcome {{username}}
-        {{else}}
-            NodeJS
-        {{/if}}
-        </title>
-    <body class="container-fluid">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Collect the nav liinks, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id"bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <i class="bi bi-film"></i>
-                        <li><a href="/">Reel Me In</a></li>
-                        <li><a href="/signup">Sign Up</a></li>
-                        <li><a href="/dashbord">Dashboard</a></li>
-                    </ul>
-                    
-                    <ul class="nav navbar-nav navbar-right">
-                        {{# if loggedin}}
-                         {{!-- <nav>
-  <button id="logout" class="btn-no-style">logout</button>
-  <a href="/login">login</a>
-</nav> --}}
-                            <li><a href="/logout">Log Out</a></li>
-                        {{else}}
-                            <li><a href="/login">Log In</a></li>
-                        {{/if}}
-                        
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!--/.container-fluid -->
-        </nav>
+<ol class="post-list border border-primary border-3 rounded">
+    {{#each reviews as |review| }}
+  <li>
+    <article class="post">
+  <div class="title">
+      <a href="/post/{{id}}" class="link-danger h3"
+      <h1>{{movieTitle}}</h1>
+      </a>
+  </div>
+  <h5 class="h5">
+      {{reviewTitle}}
+  </h5>
+  <p>
+      {{content}}
+  </p>
+  <div class="meta">
+    |
+    Reviewed by {{user.username}}
+    |
+  </div>
+</article>
+  </li>
+  {{/each}}
+</ol>
 
-        {{{body}}}
-        
-    </body>
-</html>
+  </div>
+</div>
