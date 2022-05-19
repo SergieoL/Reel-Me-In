@@ -1,7 +1,8 @@
-<section>
-    <h2>Create New Post</h2>
+<section class="container-fluid row">
+    <section class="col mt-5 border border-3 border-primary bg-info rounded">
+        <h2 class="text-center">Create New Post</h2>
     <form class="new-post-form">
-        <a href="/homepage"> &larr;Go Back</a>
+        
         <div>
             <label for="movie-title">Movie Title</label>
             <input type="text" id="movie-title" name="movie-title" />
@@ -14,8 +15,10 @@
             <label for="review-content">Content</label>
             <textarea id="review-content" name="review-content"></textarea>
         </div>
+        <a href="/homepage"> &larr;Go Back</a>
         <button type="submit" class="btn">+ Review</button>
     </form>
+</section>
 </section>
 
 <script src="/javascript/create-review.js"></script>

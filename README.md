@@ -44,7 +44,7 @@ Contact any of the authors:
 |Ted | The-Coding-Bat |
 |Markeice | Markeicegreen16 |
 |Mika | Mikak02 |
-|Kailey | Kailey |
+|Kailey | Kailey09 |
 
 ### How to Make Contributions <a name="contribute"></a>
 Please contact authors for collaboration
