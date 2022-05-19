@@ -1,21 +1,19 @@
-
-{{!-- {{Single Page HTML}} --}}
-{{!-- {{added sample post to test with}} --}}
-<article class="post">
-  <div class="title">
-    <h1> {{review.movieTitle}} </h1>
-    <h4>{{review.reviewTitle}}</h4>
-  </div>
-  <p>
-    {{review.content}}
-  </p>
-  <div class="meta">
+<div id="moviePoster"></div>
+<article class="review">
+    <div class="title">
+        <h1 id="movieTitle">{{review.movieTitle}}</h1>
+        <div id="movieYear"></div>
+        <h4>{{review.reviewTitle}}</h4>
+    </div>
+    <p>
+        {{review.content}}
+    </p>
+    <div class="meta">
      by {{review.user.username}} on
     {{review.created_at}}
     |
     <a href="/reviews/{{review.id}}">{{review.comments.length}} comment(s)</a>
-  </div>
-
+    </div>
   {{#if loggedIn}}
   <form class="comment-form">
 
@@ -47,6 +45,5 @@
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
-
+<script src="/javascript/movie-data.js"></script>
 {{/if}}
