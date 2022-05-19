@@ -1,5 +1,7 @@
 //imdb api key
 const imdbKey = 'k_wgnnz7cy';
+//var apiKey = "k_0frcw8k0";
+//var apiKey = "k_3jwm1y5n";
 const movieTitle = document.getElementById('movieTitle').innerHTML;
 
 // fetch imdb for movie data
