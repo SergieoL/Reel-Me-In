@@ -57,42 +57,49 @@ router.get('/create-account', (req, res) => {
 });
 
 // render page to load single review
-router.get('/review/:id', (req, res) => {
+// render single-post page
+router.get('/reviews/:id', (req, res) => {
   Review.findOne({
-    where: {
-      id: req.params.id
-    },
-    include: [
-      {
-        model: User,
-      }
-    ],
-    include: [
-      {
-        model: Comment,
-        include: {
-          model: User,
-          attributes: ['username']
-        }
-      }
-    ]
+      where: {
+          id: req.params.id
+      },
+      attributes: [
+          'id',
+          'movieTitle',
+          'reviewTitle',
+          'content',
+          'created_at'
+      ],
+      include: [
+          {
+              model: Comment,
+              attributes: ['id', 'comment_text', 'review_id', 'user_id', 'created_at'],
+              include: {
+                  model: User,
+                  attributes: ['username']
+              }
+          },
+          {
+              model: User,
+              attributes: ['username']
+          }
+      ]
   })
   .then(dbReviewData => {
-    if (!dbReviewData) {
-      res.status(404).json({ message: 'No review found with this id'});
-      return;
-    }
+      if (!dbReviewData) {
+          res.status(404).json({ message: 'No review found with this id' });
+          return;
+      }
+      const review = dbReviewData.get({ plain: true });
 
-    const review = dbReviewData.get({ plain: true});
-    console.log(review);
-    res.render('single-post', {
-      review,
-      loggedIn: req.session.loggedIn
-    })
+      res.render('single-post', { 
+          review,
+          loggedIn: req.session.loggedIn
+       });
   })
   .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
+      console.log(err);
+      res.status(500).json(err);
   })
 })
 
