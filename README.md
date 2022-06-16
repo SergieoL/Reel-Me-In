@@ -41,7 +41,7 @@ Contact any of the authors:
 | ----- | -------   |
 |Sergieo | SergieoL |
 |Jaime  |  Deadpool3413 |
-|Ted | The-Coding-Bat |
+|Ted | TheBatMatt |
 |Markeice | Markeicegreen16 |
 |Mika | Mikak02 |
 |Kailey | Kailey09 |
